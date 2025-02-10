@@ -1,6 +1,45 @@
-# JSONIC Database Library
+#### **Overview**
 
-JSONIC is a flexible database abstraction library that provides a simple interface for working with JSON-like data structures and MongoDB. It offers schema validation, type checking, and automatic data management features.
+This database management library provides a high-performance, schema-based JSON-backed database solution with full CRUD (Create, Read, Update, Delete) support. Designed for lightweight and efficient data handling, it enables structured data storage, retrieval, and manipulation with powerful filtering, validation, and transformation functionalities.
+
+#### **Key Features**
+
+1. **JSON-Based Storage**: Uses a JSON-based database structure, making it lightweight and human-readable.
+2. **Schema Enforcement**: Supports field validation, type checking, and unique constraints using column definitions.
+3. **Advanced Querying**: Provides filtering through regular expressions (`RegExp` class), custom predicates, and structured queries.
+4. **CRUD Operations**: Offers `CRUD` operations with batch processing, filtering, and query-based updates.
+5. **Data Validation & Integrity**:
+   - Supports `unique` constraints.
+   - Ensures `not_null` enforcement.
+   - Provides automatic type validation with optional type promotion.
+6. **ResultSet Management**: Allows result transformation into various formats including Pandas DataFrames, NumPy arrays, JSON, CSV, and Markdown.
+7. **Context Management**: Supports `with` and `async with` statements for secure transaction management.
+8. **Model-Based Design**:
+   - Uses `JSONField` for defining structured models.
+   - Supports auto-incrementing primary keys.
+   - Allows dependent field values (`depends` attribute).
+9. **Error Handling & Recovery**:
+   - Detects and fixes corrupted data.
+   - Provides `Issues` class for validation and schema enforcement.
+10. **Export & Import**:
+    - Convert records into JSON, CSV, Excel, SQLite, and other formats.
+    - Batch import/export with built-in data transformation utilities.
+
+#### **Core Components**
+
+- **`CRUD`**: Handles database operations like insert, update, delete, and query-based updates.
+- **`JSONField`**: Defines structured database models with validation, default values, and constraints.
+- **`ResultSet`**: Manages filtered and structured data retrieval.
+- **`Where`**: Implements advanced filtering with predicates and regex patterns.
+- **`JSONIC`**: Acts as the main database interface, handling file storage, data validation, and error handling.
+- **`Column`**: Defines the structure of database fields with options for primary keys, constraints, and dependencies.
+- **`Stack`**: Provides transactional operations and rollback support.
+
+#### **Use Cases**
+
+- **Lightweight Database Alternative**: Suitable for small-scale applications where traditional databases (SQL, NoSQL) are overkill.
+- **Embedded Data Storage**: Can be used in Python applications requiring structured, persistent storage without external dependencies.
+- **Data Processing & Analytics**: Provides structured querying, filtering, and transformation capabilities for data-driven applications.
 
 ## Features
 
